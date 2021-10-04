@@ -1,0 +1,11 @@
+---
+version: "2.1"
+services:
+  code-server:
+    image: kbarbounakis/code-server
+    container_name: code-server
+    environment:
+      - TZ=Europe/London
+    ports:
+      - 8080:8080
+      - 3000:3000
