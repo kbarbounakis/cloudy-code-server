@@ -7,3 +7,9 @@ echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> "$HOME/.bashrc"
 
 chown cloudy:cloudy "$HOME/.bashrc"
 chown cloudy:cloudy "$HOME/.nvm"
+
+# install local node:14
+sudo su cloudy
+source "$HOME/.bashrc"
+nvm install 14
+exit
