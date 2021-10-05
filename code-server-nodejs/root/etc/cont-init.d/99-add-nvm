@@ -6,10 +6,13 @@ echo 'export NVM_DIR="$HOME/.nvm"' >> "$HOME/.bashrc"
 echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> "$HOME/.bashrc"
 
 chown cloudy:cloudy "$HOME/.bashrc"
-chown cloudy:cloudy "$HOME/.nvm"
+chown cloudy:cloudy -R "$HOME/.nvm"
 
 # install local node:14
 sudo su cloudy
 source "$HOME/.bashrc"
 nvm install 14
-exit
+sudo su root
+
+chown cloudy:cloudy "$HOME/.bashrc"
+chown cloudy:cloudy -R "$HOME/.nvm"

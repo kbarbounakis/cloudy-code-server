@@ -16,7 +16,7 @@ fi
 exec \
     s6-setuidgid cloudy \
         /usr/local/bin/code-server \
-            --bind-addr 0.0.0.0:8080 \
+            --bind-addr 0.0.0.0:3000 \
             --user-data-dir /config/data \
             --extensions-dir /config/extensions \
             --disable-telemetry \
