@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/with-contenv bash
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
@@ -12,4 +12,4 @@ chown cloudy:cloudy "$HOME/.nvm"
 sudo su cloudy
 source "$HOME/.bashrc"
 nvm install 14
-sudo su root
+exit
