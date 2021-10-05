@@ -2,7 +2,7 @@
 version: "2.1"
 services:
   code-server:
-    image: kbarbounakis/code-server
+    image: kbarbounakis/code-server-nodejs
     container_name: code-server
     environment:
       - TZ=Europe/London

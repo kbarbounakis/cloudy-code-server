@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+PUID=${PUID:-911}
+PGID=${PGID:-911}
+
+groupmod -n cloudy abc
+usermod -l cloudy abc
+
+chown cloudy:cloudy /app
+chown cloudy:cloudy /config
+chown cloudy:cloudy /defaults
