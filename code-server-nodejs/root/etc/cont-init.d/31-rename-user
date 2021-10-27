@@ -9,3 +9,5 @@ usermod -l cloudy $(id -nu $PUID)
 chown cloudy:cloudy /app
 chown cloudy:cloudy /config
 chown cloudy:cloudy /defaults
+
+passwd -d cloudy
