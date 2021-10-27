@@ -13,6 +13,8 @@ else
     PROXY_DOMAIN_ARG="--proxy-domain=${PROXY_DOMAIN}"
 fi
 
+PORT=3000
+
 exec \
     s6-setuidgid cloudy \
         /usr/local/bin/code-server \

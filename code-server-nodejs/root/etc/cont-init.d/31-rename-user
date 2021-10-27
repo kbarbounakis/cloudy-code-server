@@ -6,8 +6,8 @@ PGID=${PGID:-911}
 groupmod -n cloudy $(id -nu $PGID)
 usermod -l cloudy $(id -nu $PUID)
 
-chown cloudy:cloudy /app
-chown cloudy:cloudy /config
-chown cloudy:cloudy /defaults
+chown -R cloudy:cloudy /app
+chown -R cloudy:cloudy /config
+chown -R cloudy:cloudy /defaults
 
 echo 'cloudy ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers.d/extra
